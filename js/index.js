@@ -7,7 +7,7 @@
 function delay(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
-delay(2000).then(() => console.log("Promise resolved after 2 seconds"));
+delay(1000).then(() => console.log("Promise resolved (after 1 second)"));
 
 /*2. **Цепочка Промисов**:
 Создайте две функции, `firstTask` и `secondTask`, каждая из которых возвращает
@@ -18,7 +18,7 @@ delay(2000).then(() => console.log("Promise resolved after 2 seconds"));
 function inital() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("First task completed");
+      resolve("First task successful");
     }, 1000);
   });
 }
@@ -26,7 +26,7 @@ function inital() {
 function subsequent() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Second task completed");
+      resolve("Second task successful");
     }, 1000);
   });
 }
@@ -49,7 +49,7 @@ inital()
 function task1() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Task 1 completed");
+      resolve("Task 1 successful");
     }, 1000);
   });
 }
@@ -57,7 +57,7 @@ function task1() {
 function task2() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Task 2 completed");
+      resolve("Task 2 successful");
     }, 2000);
   });
 }
@@ -65,7 +65,7 @@ function task2() {
 function task3() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Task 3 completed");
+      resolve("Task 3 successful");
     }, 3000);
   });
 }
@@ -84,7 +84,7 @@ Promise.all([task1(), task2(), task3()]).then((results) => {
 function fastTask() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Fast task completed");
+      resolve("Fast task successful");
     }, 200);
   });
 }
@@ -92,7 +92,7 @@ function fastTask() {
 function slowTask() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Slow task completed");
+      resolve("Slow task successful");
     }, 3000);
   });
 }
